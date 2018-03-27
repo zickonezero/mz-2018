@@ -1,0 +1,38 @@
+{
+    "esversion": 6,
+    "bitwise": true,
+    "camelcase": true,
+    "curly": true,
+    "eqeqeq": true,
+    "forin": true,
+    "immed": true,
+    "indent": 4,
+    "latedef": true,
+    "newcap": true,
+    "noarg": true,
+    "noempty": true,
+    "nonew": true,
+    "plusplus": true,
+    "quotmark": true,
+    "regexp": true,
+    "undef": true,
+    "unused": true,
+    // "strict": true,
+    "trailing": true,
+    // Based roughly on the PyLint settings
+    "maxparams": 5,
+    "maxdepth": 4,
+    "maxstatements": 50,
+    "maxcomplexity": 12,
+    "maxlen": 120,
+
+    // Allow functions to be defined out of line
+    "latedef": "nofunc",
+
+    // Add in some environment data
+    "browser": true,
+    "jquery": true,
+
+    // Pain in the backside white spaceing, but it keeps us honest
+    "white": true
+}
