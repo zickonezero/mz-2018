@@ -4,16 +4,15 @@ import HocMain from '../hoc/hocMain';
 
 class Work extends Component {
     state = {
-        workdData: null
+        workData: null
     };
 
     componentDidMount() {
         axiosConfig.get('/work.json')
             .then(resp => {
                 this.setState({
-                    workdData: resp.data
+                    workData: resp.data
                 });
-                console.log(this.state.workdData);
             })
             .catch(err => {
                 console.log(err);
@@ -21,9 +20,20 @@ class Work extends Component {
     }
 
     render () {
+        console.log(this.state.workData);
+        let works = <div>Loading...</div>;
+
+        if (this.state.workData) {
+            works = this.state.workData.map((work) => {
+                return (
+                    <li key={work.proj_header}></li>
+                );
+            });
+        }
+
         return (
             <ul>
-
+                {works}
             </ul>
         );
     }
