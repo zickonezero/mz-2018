@@ -1,0 +1,495 @@
+@font-face {
+    font-family: 'continuum_mediumregular';
+    src: url('fonts/continuum/contm-webfont.eot');
+    src: url('fonts/continuum/contm-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/continuum/contm-webfont.woff') format('woff'), url('fonts/continuum/contm-webfont.ttf') format('truetype'), url('fonts/continuum/contm-webfont.svg#continuum_mediumregular') format('svg');
+    font-weight: normal;
+    font-style: normal
+}
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L5,
+li.L6,
+li.L7,
+li.L8 {
+    list-style-type: none
+}
+#ascensorBuilding {
+    overflow: hidden
+}
+section {
+    overflow: auto
+}
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden
+}
+body {
+    color: #6a6a6a;
+    font-family: ‘Trebuchet MS’, Helvetica, sans-serif;
+    font-size: 0.8em;
+    text-align: center;
+}
+a:hover {
+    color: #729ed8;
+    text-decoration: underline
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+ul.thumbnails {
+    margin-bottom: 170px
+}
+h1 {
+    font-size: 46px
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-rendering: auto
+}
+.hidden {
+    display: none
+}
+#fancybox-thumbs ul li a img {
+    max-width: none
+}
+#subclass {
+    margin-bottom: 22px
+}
+#subclass p {
+    margin: 0
+}
+#socialwell {
+    margin: 10px 0 30px 0;
+    font-size: 1.3em;
+    line-height: 1em
+}
+#socialwell a:hover {
+    color: #2eccfa
+}
+.thumb-new-line {
+    clear: both!important;
+    margin-left: 0!important
+}
+#loader {
+    width: 100%;
+    height: 100%;
+    background: white
+}
+#my-name {
+    text-transform: uppercase;
+    font-size: 6.7em;
+    margin-bottom: 10px;
+    line-height: 1em;
+    clear: both
+}
+#navigationMap {
+    z-index: 999;
+    margin: 25px 0 0
+}
+#navigationMap ul {
+    width: 552px;
+    margin: 0 auto
+}
+#navigationMap li {
+    float: left;
+    margin: auto -22px 0
+}
+.ascensorLink {
+    position: relative
+}
+.ascensorLink.remove-hover:hover {
+    cursor: pointer
+}
+#nav1 {
+    height: 129px;
+    background: url('../img/sprites/logo-sprite-multiple.png') top left no-repeat;
+    background-position: 0 0;
+    width: 219px;
+    z-index: 100
+}
+#nav2 {
+    height: 100px;
+    background: url('../img/sprites/logo-sprite-multiple.png') top left no-repeat;
+    background-position: -54px -129px;
+    width: 111px;
+    z-index: 200;
+    margin-top: 29px!important
+}
+#nav3 {
+    height: 100px;
+    background: url('../img/sprites/logo-sprite-multiple.png') top left no-repeat;
+    background-position: -54px -229px;
+    width: 111px
+}
+#nav4 {
+    height: 100px;
+    background: url('../img/sprites/logo-sprite-multiple.png') top left no-repeat;
+    background-position: -54px -129px;
+    width: 111px;
+    z-index: 200;
+    margin-top: 29px!important
+}
+#nav5 {
+    height: 129px;
+    background: url('../img/sprites/logo-sprite-multiple.png') top left no-repeat;
+    background-position: 0 -330px;
+    width: 220px;
+    z-index: 100
+}
+.ascensorLink1.remove-hover:hover #nav-title1,
+.ascensorLink2.remove-hover:hover #nav-title2,
+.ascensorLink3.remove-hover:hover #nav-title3,
+.ascensorLink4.remove-hover:hover #nav-title4,
+.ascensorLink4.remove-hover:hover #nav-title5 {
+    display: block
+}
+.ascensorLinkActive #nav-title1,
+.ascensorLinkActive #nav-title2,
+.ascensorLinkActive #nav-title3,
+.ascensorLinkActive #nav-title4,
+.ascensorLinkActive #nav-title5 {
+    display: block
+}
+#nav1.ascensorLinkActive,
+#nav1.remove-hover:hover {
+    background-position: 0 -459px
+}
+#nav2.ascensorLinkActive,
+#nav2.remove-hover:hover {
+    background-position: -54px -588px
+}
+#nav3.ascensorLinkActive,
+#nav3.remove-hover:hover {
+    background-position: -54px -688px
+}
+#nav4.ascensorLinkActive,
+#nav4.remove-hover:hover {
+    background-position: -54px -588px
+}
+#nav5.ascensorLinkActive,
+#nav5.remove-hover:hover {
+    background-position: 0 -789px
+}
+.ascensorLinkActive.remove-hover:hover {
+    cursor: default
+}
+.thumbnail {
+    display: block;
+    padding: 4px;
+    line-height: 20px;
+    border: 0;
+    -webkit-border-radius: none;
+    -moz-border-radius: none;
+    border-radius: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none
+}
+a.thumbnail:hover {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none
+}
+.dif-color {
+    color: lightgrey
+}
+input[readonly] {
+    background-color: white
+}
+#input-name {
+    border: 0;
+    text-align: center;
+    font-family: 'continuum_mediumregular', Arial, sans-serif;
+    color: #08c;
+    font-size: 46px;
+    line-height: 46px;
+    margin-top: 5px
+}
+#input-name:focus {
+    outline: 0
+}
+#name-form {
+    position: relative;
+    margin-top: 15px
+}
+#name-form h1 {
+    color: #08c;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -106px;
+    display: none
+}
+#name-form h1:hover {
+    color: #2eccfa
+}
+#intro {
+    margin: 0 0 30px;
+    width: 40%;
+    margin: 20px auto;
+    display: inline
+}
+.description {
+    line-height: 28px
+}
+.qual-item,
+#about {
+    font-size: 34px;
+    line-height: 40px
+}
+#section2-title {
+    margin-bottom: 30px
+}
+#section3-title {
+    margin-bottom: 30px
+}
+#section4-title {
+    margin-bottom: 30px
+}
+#qual-box {
+    text-align: center;
+    margin-top: 40px
+}
+#bio-box {
+    width: 1000px;
+    margin: 0 auto
+}
+#input_box {
+    margin-top: 50px;
+    margin-left: 30px
+}
+.bottom_input_label {
+    margin-right: 20px
+}
+#submit_btn {
+    margin-top: 10px
+}
+.form_section {
+    float: left
+}
+.button_row {
+    clear: both;
+    text-align: left
+}
+.separator {
+    margin: 30px 0
+}
+@media only screen and (max-width: 1640px) {
+    #qual-box {
+        float: none;
+        width: auto;
+        margin: 30px auto
+    }
+    .large-img img {
+        width: 304px
+    }
+}
+@media only screen and (max-width: 1345px) {
+    .large-img img {
+        width: 204px
+    }
+}
+@media only screen and (max-width: 1030px) {
+    #bio-box {
+        width: auto
+    }
+    .large-img img {
+        width: 170px
+    }
+}
+@media only screen and (max-width: 1130px) {
+    #socialwell {
+        margin-bottom: 30px
+    }
+}
+@media only screen and (max-width: 979px) {
+    #intro,
+    #section2-title,
+    #section3-title,
+    #section4-title {
+        margin-top: 0;
+        margin-left: 0
+    }
+    .fancybox-nav span {
+        visibility: visible!important
+    }
+    .fancybox-prev span {
+        left: 0!important
+    }
+    .fancybox-next span {
+        right: 0!important
+    }
+}
+@media only screen and (max-width: 791px) {
+    #navigationMap li {
+        margin: auto -19px 0
+    }
+    #navigationMap ul {
+        width: 440px
+    }
+    #my-name {
+        font-size: 5.5em
+    }
+    #nav1 {
+        height: 105px;
+        background-position: 0 -918px;
+        width: 180px
+    }
+    #nav1.ascensorLinkActive,
+    #nav1.remove-hover:hover {
+        background-position: 0 -1294px
+    }
+    #nav2 {
+        height: 82px;
+        background-position: -45px -1024px;
+        width: 90px
+    }
+    #nav2.ascensorLinkActive,
+    #nav2.remove-hover:hover {
+        background-position: -45px -1399px
+    }
+    #nav3 {
+        height: 82px;
+        background-position: -45px -1106px;
+        width: 90px
+    }
+    #nav3.ascensorLinkActive,
+    #nav3.remove-hover:hover {
+        background-position: -45px -1481px
+    }
+    #nav4 {
+        height: 81px;
+        background-position: -45px -1024px;
+        width: 90px
+    }
+    #nav4.ascensorLinkActive,
+    #nav4.remove-hover:hover {
+        background-position: -45px -1399px
+    }
+    #nav5 {
+        height: 105px;
+        background-position: 0 -1188px;
+        width: 180px
+    }
+    #nav5.ascensorLinkActive,
+    #nav5.remove-hover:hover {
+        background-position: 0 -1564px
+    }
+}
+@media only screen and (max-width: 767px) {
+    body {
+        padding-right: 0;
+        padding-left: 0
+    }
+    .large-img img {
+        width: 350px
+    }
+}
+@media only screen and (max-width: 570px) {
+    h1 {
+        font-size: 2.5em
+    }
+    #name-form h1 {
+        margin-left: -82px
+    }
+    #subclass {
+        margin-bottom: 10px
+    }
+    .qual-item,
+    #about {
+        font-size: 1.9em;
+        line-height: 1.1em
+    }
+    #qual-box {
+        margin: 20px auto
+    }
+    #navigationMap {
+        margin: 10px 0 0
+    }
+    #navigationMap li {
+        margin: auto -13px 0
+    }
+    #navigationMap ul {
+        width: 290px;
+        height: 61px
+    }
+    #my-name {
+        font-size: 3.6em;
+        margin-bottom: 0
+    }
+    #socialwell {
+        margin: 5px 0 10px 0
+    }
+    #nav1 {
+        height: 70px;
+        background-position: 0 -1669px;
+        width: 120px
+    }
+    #nav1.ascensorLinkActive,
+    #nav1.remove-hover:hover {
+        background-position: 0 -1920px
+    }
+    #nav2 {
+        height: 54px;
+        background-position: -30px -1740px;
+        width: 60px;
+        margin-top: 17px!important
+    }
+    #nav2.ascensorLinkActive,
+    #nav2.remove-hover:hover {
+        background-position: -30px -1991px
+    }
+    #nav3 {
+        height: 54px;
+        background-position: -30px -1795px;
+        width: 60px
+    }
+    #nav3.ascensorLinkActive,
+    #nav3.remove-hover:hover {
+        background-position: -30px -2045px
+    }
+    #nav4 {
+        height: 54px;
+        background-position: -30px -1740px;
+        width: 60px;
+        margin-top: 17px!important
+    }
+    #nav4.ascensorLinkActive,
+    #nav4.remove-hover:hover {
+        background-position: -30px -1991px
+    }
+    #nav5 {
+        height: 70px;
+        background-position: 0 -1849px;
+        width: 120px
+    }
+    #nav5.ascensorLinkActive,
+    #nav5.remove-hover:hover {
+        background-position: 0 -2100px
+    }
+}
+@media only screen and (max-width: 350px) {
+    #my-name {
+        font-size: 3.4em;
+        margin-bottom: 0
+    }
+    #socialwell {
+        margin-bottom: 10px
+    }
+    .large-img img {
+        width: 300px
+    }
+}

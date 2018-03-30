@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axiosConfig from '../axiosConfig';
-import HocMain from '../hoc/hocMain';
+import MainHOC from '../hoc/MainHOC';
 
 class Work extends Component {
     state = {
@@ -8,10 +8,11 @@ class Work extends Component {
     };
 
     componentDidMount() {
-        axiosConfig.get('/work.json')
+        axiosConfig.get('/all.json')
             .then(resp => {
+                console.log(resp.data);
                 this.setState({
-                    workData: resp.data
+                    workData: resp.data.work
                 });
             })
             .catch(err => {
@@ -20,16 +21,8 @@ class Work extends Component {
     }
 
     render () {
-        console.log(this.state.workData);
-        let works = <div>Loading...</div>;
-
-        if (this.state.workData) {
-            works = this.state.workData.map((work) => {
-                return (
-                    <li key={work.proj_header}></li>
-                );
-            });
-        }
+        let works = !this.state.workData ?
+            null : <MainHOC dataFeed={this.state.workData} />;
 
         return (
             <ul>

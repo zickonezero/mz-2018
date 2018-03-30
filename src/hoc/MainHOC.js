@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Main = (props) => (
+const mainHoc = (props) => (
     <ul className="thumbnails">
         {props.dataFeed.map(function (data, i) {
             let newLine = "",
@@ -43,4 +43,4 @@ const Main = (props) => (
     </ul>
 );
 
-export default Main;
+export default mainHoc;
