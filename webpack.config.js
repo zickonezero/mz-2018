@@ -26,7 +26,7 @@ module.exports = {
                 exclude: /node_modules/,
                 use: [
                     { loader: 'style-loader' },
-                    { 
+                    {
                         loader: 'css-loader',
                         options: {
                             importLoaders: 1,
@@ -34,7 +34,7 @@ module.exports = {
                             localIdentName: '[name]__[local]__[hash:base64:5]'
                         }
                      },
-                     { 
+                     {
                          loader: 'postcss-loader',
                          options: {
                              ident: 'postcss',
@@ -61,6 +61,16 @@ module.exports = {
             template: __dirname + '/src/index.html',
             filename: 'index.html',
             inject: 'body'
-        })
+        }),
+        // new WebpackCdnPlugin({
+        //     modules: [
+        //         {
+        //             name: 'vue',
+        //             var: 'Vue',
+        //             style: 'dist/vue.css'
+        //         },
+        //     ],
+        //     publicPath: '/node_modules'
+        // })
     ]
 };
