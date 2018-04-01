@@ -13,8 +13,6 @@ class Home extends Component {
                 const sortedWorkData = resp.data.work.sort((a, b) => {
                     return a.order_num - b.order_num;
                 });
-                console.log(sortedWorkData);
-
                 this.setState({
                     workData: sortedWorkData
                 });
