@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axiosConfig from '../axiosConfig';
 import MainHOC from '../hoc/MainHOC';
+import Nav from '../components/Nav';
 
 class Home extends Component {
     state = {
@@ -31,7 +32,7 @@ class Home extends Component {
                 <div className="row-fluid">
                     <div className="span12">
 
-                        <div id="navComponent"></div>
+                        <Nav />
 
                         <h1 id="my-name">michael zick</h1>
 
