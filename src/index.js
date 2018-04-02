@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 
 import './lib/css/bootstrap.my-mod.min.css';
+import './lib/css/bootstrap-responsive.min.css';
 import './index.css';
 import './global.css';
 
