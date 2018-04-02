@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import bootstrap from 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import './global.css';
 import App from './App';
 
 import './lib/js/jquery-1.8.3.js';
 import './lib/js/jquery-ui-1.9.1.js';
-
-import bootstrap from 'bootstrap';
 
 import './lib/js/ascensor.min.js';
 import './lib/js/jquery.scrollTo-1.4.3.1-min.js';
