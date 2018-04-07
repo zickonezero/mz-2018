@@ -7,7 +7,6 @@ const Main = (function () {
         hideThis;
 
     function init() {
-        insertStuff();
         bottomPadding();
         checkCookie();
         hideLoader();
@@ -129,48 +128,6 @@ const Main = (function () {
 
     function hideLoader() {
         $('#loader').hide();
-    }
-
-    function insertStuff() {
-        $('#submit_btn').click(function () {
-            var addStuff = {
-                orderNum: parseInt($('#order_num').val()),
-                projLink0: $('#proj_link_0').val(),
-                projRel: $('#proj_rel').val(),
-                projTitle: $('#proj_title').val(),
-                projRole: $('#proj_role').val(),
-                projThumb: $('#proj_thumb').val(),
-                projHeader: $('#proj_header').val(),
-                projDesc: $('#proj_desc').val(),
-                projLink1: $('#proj_link_1').val(),
-                projLink1Title: $('#proj_link_1_title').val(),
-                projLink1Role: $('#proj_link_1_role').val(),
-                projLink2: $('#proj_link_2').val(),
-                projLink2Title: $('#proj_link_2_title').val(),
-                projLink2Role: $('#proj_link_2_role').val(),
-                projLink3: $('#proj_link_3').val(),
-                projLink3Title: $('#proj_link_3_title').val(),
-                projLink3Role: $('#proj_link_3_role').val(),
-                workRadio: $('#work_radio').prop("checked"),
-                artRadio: $('#art_radio').prop("checked"),
-                picsRadio: $('#pics_radio').prop("checked"),
-                urlCheck: $('#url_check').prop("checked"),
-                iframeCheck: $('#iframe_check').prop("checked"),
-                newLineCheck: $('#new_line_check').prop("checked"),
-            };
-
-            $.ajax({
-                url: "/",
-                type: "POST",
-                contentType: "application/json",
-                processData: false,
-                data: JSON.stringify(addStuff),
-                success: function (data) {
-                    alert("Data inputed successfully.");
-                    location.reload();
-                }
-            });
-        });
     }
 
     function inputHere() {
