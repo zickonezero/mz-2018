@@ -1,5 +1,3 @@
-import isMobile from './lib/js/is-mobile.js';
-
 const Main = (function () {
     const nameInput = $('#input-name');
     let theUsername = "",

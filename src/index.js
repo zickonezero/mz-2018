@@ -25,8 +25,6 @@ import './lib/js/fancybox/source/helpers/jquery.fancybox-buttons.js';
 import './lib/js/fancybox/source/helpers/jquery.fancybox-media.js';
 import './lib/js/fancybox/source/helpers/jquery.fancybox-thumbs.js';
 
-import './global.js';
-
 const app = (
     <App />
 );
