@@ -1,4 +1,4 @@
-var isMobile = {
+export const isMobile = {
     Android: function() {
         return navigator.userAgent.match(/Android/i) ? true : false;
     },
@@ -15,5 +15,3 @@ var isMobile = {
         return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Windows());
     }
 };
-
-module.exports = isMobile;

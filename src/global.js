@@ -1,5 +1,29 @@
-const Main = (function () {
-    const nameInput = $('#input-name');
+import './lib/css/bootstrap.my-mod.min.css';
+import './lib/css/bootstrap-responsive.min.css';
+import './index.css';
+import './global.css';
+
+import './lib/js/jquery-1.8.3.js';
+import './lib/js/jquery-ui-1.9.1.js';
+import './lib/js/bootstrap.min.js';
+
+import './lib/js/ascensor.min.js';
+import './lib/js/jquery.scrollTo-1.4.3.1-min.js';
+
+import './lib/js/fancybox/source/jquery.fancybox.css';
+import './lib/js/fancybox/source/helpers/jquery.fancybox-buttons.css';
+import './lib/js/fancybox/source/helpers/jquery.fancybox-thumbs.css';
+
+import './lib/js/jquery.easing-1.3.js';
+import './lib/js/fancybox/lib/jquery.mousewheel-3.0.6.pack.js';
+import './lib/js/fancybox/source/jquery.fancybox.pack.js';
+import './lib/js/fancybox/source/helpers/jquery.fancybox-buttons.js';
+import './lib/js/fancybox/source/helpers/jquery.fancybox-media.js';
+import './lib/js/fancybox/source/helpers/jquery.fancybox-thumbs.js';
+
+import { isMobile } from './lib/js/is-mobile.js';
+
+export const Main = (() => {
     let theUsername = "",
         theMessage,
         hideThis;
@@ -34,6 +58,26 @@ const Main = (function () {
             $('#footer, #picard').css('padding-bottom', 0);
             $('.thumbnails, #picard').css('margin-bottom', 0);
         }
+
+        $(".fancybox").fancybox({
+            prevEffect: "none",
+            nextEffect: "none",
+            helpers: {
+                title: {
+                    type: "outside"
+                },
+                overlay: {
+                    opacity: 0.8,
+                    css: {
+                        "background-color": "#000"
+                    }
+                },
+                thumbs: {
+                    width: 50,
+                    height: 50
+                }
+            }
+        });
     }
 
     function myPlugins() {
@@ -62,7 +106,7 @@ const Main = (function () {
                         $('.loopThis').show().loopThis(600, 600, 0.4);
                     } else {
                         $('.loopThis').removeClass('loopThis');
-                        nameInput.blur().hide();
+                        $('#input-name').blur().hide();
                         $('body').animate({
                             scrollTop: 0
                         });
@@ -130,12 +174,12 @@ const Main = (function () {
 
     function inputHere() {
         $('#name-form h1').click(function(){
-            nameInput.removeAttr('readonly');
+            $('#input-name').removeAttr('readonly');
             $('.loopThis').stop();
             $(this).hide();
-            nameInput.focus();
+            $('#input-name').focus();
         });
-        nameInput.blur(function(){
+        $('#input-name').blur(function(){
             if ($(this).val() == '') {
                 $('.loopThis').show().loopThis(600, 600, 0.4);
             }
@@ -156,8 +200,8 @@ const Main = (function () {
     }
 
     function setInputWidth(multiple) {
-        if (nameInput.val()) {
-            var inputText = nameInput.val(),
+        if ($('#input-name').val()) {
+            var inputText = $('#input-name').val(),
                 inputTextLength;
 
             if (inputText.length < 20){
@@ -165,7 +209,7 @@ const Main = (function () {
             } else {
                 inputTextLength = inputText.length + 1;
             }
-            nameInput.width(inputTextLength * multiple);
+            $('#input-name').width(inputTextLength * multiple);
         }
     }
 
@@ -194,7 +238,7 @@ const Main = (function () {
         if (username) {
             theMessage = "Welcome back " + username + ". Click on the logo to navigate.";
             setInputWidth(0);
-            nameInput.attr('readonly', 'readonly');
+            $('#input-name').attr('readonly', 'readonly');
             hideThis = true;
         } else {
             theMessage = "Welcome. Please state your name.";
@@ -209,27 +253,3 @@ const Main = (function () {
         init: init
     };
 })();
-
-$(function(){
-    Main.init();
-
-    $(".fancybox").fancybox({
-        prevEffect: "none",
-        nextEffect: "none",
-        helpers: {
-            title: {
-                type: "outside"
-            },
-            overlay : {
-                opacity : 0.8,
-                css : {
-                    "background-color" : "#000"
-                }
-            },
-            thumbs: {
-                width : 50,
-                height  : 50
-            }
-        }
-    });
-});
