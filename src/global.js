@@ -173,13 +173,15 @@ export const Main = (() => {
     }
 
     function inputHere() {
+        const $inputName = $('#input-name');
+
         $('#name-form h1').click(function(){
-            $('#input-name').removeAttr('readonly');
+            $inputName.removeAttr('readonly');
             $('.loopThis').stop();
             $(this).hide();
-            $('#input-name').focus();
+            $inputName.focus();
         });
-        $('#input-name').blur(function(){
+        $inputName.blur(function(){
             if ($(this).val() == '') {
                 $('.loopThis').show().loopThis(600, 600, 0.4);
             }
@@ -200,8 +202,10 @@ export const Main = (() => {
     }
 
     function setInputWidth(multiple) {
-        if ($('#input-name').val()) {
-            var inputText = $('#input-name').val(),
+        const $inputName = $('#input-name');
+
+        if ($inputName.val()) {
+            var inputText = $inputName.val(),
                 inputTextLength;
 
             if (inputText.length < 20){
@@ -209,7 +213,7 @@ export const Main = (() => {
             } else {
                 inputTextLength = inputText.length + 1;
             }
-            $('#input-name').width(inputTextLength * multiple);
+            $inputName.width(inputTextLength * multiple);
         }
     }
 
@@ -227,14 +231,16 @@ export const Main = (() => {
     }
 
     function setCookie(c_name,value,exdays) {
-        var exdate=new Date();
+        const exdate=new Date();
+
         exdate.setDate(exdate.getDate() + exdays);
         var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
         document.cookie=c_name + "=" + c_value;
     }
 
     function checkCookie() {
-        var username=getCookie("username");
+        let username = getCookie("username");
+
         if (username) {
             theMessage = "Welcome back " + username + ". Click on the logo to navigate.";
             setInputWidth(0);
