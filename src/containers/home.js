@@ -16,6 +16,7 @@ class Home extends Component {
                 const sortedWorkData = resp.data.work.sort((a, b) => {
                     return a.order_num - b.order_num;
                 });
+
                 this.setState({
                     aboutData: resp.data.about,
                     artData: resp.data.art,
@@ -38,10 +39,12 @@ class Home extends Component {
             null : <MainHOC dataFeed={this.state.artData} />;
         let pics = !this.state.picsData ?
             null : <MainHOC dataFeed={this.state.picsData} />;
-        let skills = !this.state.skillData ?
-            null : <MainHOC dataFeed={this.state.skillData} />;
         let about = !this.state.aboutData ?
             null : <MainHOC dataFeed={this.state.aboutData} />;
+        let skills = !this.state.skillsData ?
+            null : this.state.skillsData.map((skill) => {
+                return <div key={skill.skill}>{skill.skill}</div>;
+            });
 
         return (
             <div className="content">
