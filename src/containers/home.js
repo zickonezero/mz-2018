@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import axiosConfig from '../axiosConfig';
 import MainHOC from '../hoc/MainHOC';
 import Nav from '../components/Nav';
+import NameForm from '../components/NameForm';
 import { Main } from '../global.js';
 
 class Home extends Component {
@@ -16,6 +17,10 @@ class Home extends Component {
                     return a.order_num - b.order_num;
                 });
                 this.setState({
+                    aboutData: resp.data.about,
+                    artData: resp.data.art,
+                    picsData: resp.data.pics,
+                    skillsData: resp.data.skills,
                     workData: sortedWorkData
                 });
 
@@ -29,6 +34,14 @@ class Home extends Component {
     render () {
         let works = !this.state.workData ?
             null : <MainHOC dataFeed={this.state.workData} />;
+        let art = !this.state.artData ?
+            null : <MainHOC dataFeed={this.state.artData} />;
+        let pics = !this.state.picsData ?
+            null : <MainHOC dataFeed={this.state.picsData} />;
+        let skills = !this.state.skillData ?
+            null : <MainHOC dataFeed={this.state.skillData} />;
+        let about = !this.state.aboutData ?
+            null : <MainHOC dataFeed={this.state.aboutData} />;
 
         return (
             <div className="content">
@@ -58,10 +71,8 @@ class Home extends Component {
 
                                 <h1 id="intro" className="typeText"></h1>
                                 <br></br>
-                                <form id="name-form">
-                                    <input id="input-name" maxLength="20" readOnly="readonly" />
-                                    <h1 className="loopThis">Input Here</h1>
-                                </form>
+
+                                <NameForm />
                             </section>
 
                             <section className="add-border">
@@ -74,22 +85,26 @@ class Home extends Component {
                             <section className="add-border large-img">
                                 <h1 id="section3-title">Cultural Artifacts</h1>
                                 <div id="art" className="row-fluid">
+                                    {art}
                                 </div>
                             </section>
 
                             <section className="add-border large-img">
                                 <h1 id="section4-title">Personnel</h1>
                                 <div id="pics" className="row-fluid">
+                                    {pics}
                                 </div>
                             </section>
 
                             <section>
                                 <h1 id="section5-title">Captain's Log</h1>
                                 <div id="bio-box">
+                                    {about}
                                 </div>
                                 <div id="qual-box">
                                     <h1 id="qual-header">Qualifications</h1>
                                     <div id="skills-box">
+                                        {skills}
                                     </div>
                                 </div>
                             </section>
@@ -102,7 +117,7 @@ class Home extends Component {
                         </div>
                     </div>
                 </div>
-            </div >
+            </div>
         );
     }
 };
