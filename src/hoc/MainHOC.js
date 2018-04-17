@@ -6,7 +6,9 @@ const mainHoc = (props) => {
             <Fragment>
                 <h1 id="section5-title">Captain's Log</h1>
                 <div id="bio-box">
-                    {props.dataFeed[0].proj_desc}
+                    <p id='about'>
+                        {props.dataFeed[0].proj_desc}
+                    </p>
                 </div>
             </Fragment>
         );
@@ -16,9 +18,12 @@ const mainHoc = (props) => {
             <div id="qual-box">
                 <h1 id="qual-header">Qualifications</h1>
                 <div id="skills-box">
-                    {props.dataFeed.map((skill) => {
-                        return <div key={skill.skill}>{skill.skill}</div>;
-                    })};
+                    <ul>
+                        {props.dataFeed.map((skill) => {
+                            return <li className='lato qual-item'
+                                key={skill.skill}>{skill.skill}</li>;
+                        })};
+                    </ul>
                 </div>
             </div>
         );
