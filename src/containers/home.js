@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import axiosConfig from '../axiosConfig';
 import MainHOC from '../hoc/MainHOC';
 import Nav from '../components/Nav';
@@ -33,18 +33,16 @@ class Home extends Component {
     }
 
     render () {
-        let works = !this.state.workData ?
-            null : <MainHOC dataFeed={this.state.workData} />;
-        let art = !this.state.artData ?
-            null : <MainHOC dataFeed={this.state.artData} />;
-        let pics = !this.state.picsData ?
-            null : <MainHOC dataFeed={this.state.picsData} />;
-        let about = !this.state.aboutData ?
-            null : <MainHOC dataFeed={this.state.aboutData} />;
-        let skills = !this.state.skillsData ?
-            null : this.state.skillsData.map((skill) => {
-                return <div key={skill.skill}>{skill.skill}</div>;
-            });
+        const works = !this.state.workData ?
+            null : <MainHOC header='Corporate Entities' dataFeed={this.state.workData} />;
+        const art = !this.state.artData ?
+            null : <MainHOC header='Cultural Artifacts' dataFeed={this.state.artData} />;
+        const pics = !this.state.picsData ?
+            null : <MainHOC header='Personnel' dataFeed={this.state.picsData} />;
+        const about = !this.state.aboutData ?
+            null : <MainHOC header={'Captain\'s Log'} dataFeed={this.state.aboutData} />;
+        const skills = !this.state.skillsData ?
+            null : <MainHOC header='Qualifications' dataFeed={this.state.skillsData} />;
 
         return (
             <div className="content">
@@ -71,10 +69,8 @@ class Home extends Component {
                         <div id="ascensorBuilding">
                             <section>
                                 <div id="loader"></div>
-
                                 <h1 id="intro" className="typeText"></h1>
                                 <br></br>
-
                                 <NameForm />
                             </section>
 
@@ -100,16 +96,8 @@ class Home extends Component {
                             </section>
 
                             <section>
-                                <h1 id="section5-title">Captain's Log</h1>
-                                <div id="bio-box">
-                                    {about}
-                                </div>
-                                <div id="qual-box">
-                                    <h1 id="qual-header">Qualifications</h1>
-                                    <div id="skills-box">
-                                        {skills}
-                                    </div>
-                                </div>
+                                {about}
+                                {skills}
                             </section>
 
                             <div id="proj_img_links">
