@@ -27,7 +27,7 @@ module.exports = {
                 exclude: /node_modules/,
                 use: [
                     { loader: 'style-loader' },
-                    { 
+                    {
                         loader: 'css-loader',
                         options: {
                             importLoaders: 1,
@@ -35,7 +35,7 @@ module.exports = {
                             localIdentName: '[name]__[local]__[hash:base64:5]'
                         }
                      },
-                     { 
+                     {
                          loader: 'postcss-loader',
                          options: {
                              ident: 'postcss',
@@ -58,6 +58,11 @@ module.exports = {
         ]
     },
     plugins: [
+        new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: JSON.stringify('production')
+            }
+        }),
         new HtmlWebpackPlugin({
             template: __dirname + '/src/index.html',
             filename: 'index.html',
