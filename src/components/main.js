@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-const mainHoc = (props) => {
+const main = (props) => {
     if (props.header === 'Captain\'s Log') {
         return (
             <Fragment>
@@ -77,4 +77,4 @@ const mainHoc = (props) => {
     );
 };
 
-export default mainHoc;
+export default main;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ExtraImages = (props) => (
+const extraImages = (props) => (
     <div id={props.id}>
         {props.dataFeed.map(function(data, i) {
             let projLink1,
@@ -36,4 +36,4 @@ const ExtraImages = (props) => (
     </div>
 );
 
-export default ExtraImages;
+export default extraImages;

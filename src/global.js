@@ -23,7 +23,7 @@ import './lib/js/fancybox/source/helpers/jquery.fancybox-thumbs.js';
 
 import { isMobile } from './lib/js/is-mobile.js';
 
-export const Main = (() => {
+export const GlobalJS = (() => {
     let theUsername = "",
         theMessage,
         hideThis;

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import axiosConfig from '../axiosConfig';
-import MainHOC from '../hoc/MainHOC';
+import Main from '../components/main';
 import ExtraImages from '../components/extraImages';
-import Nav from '../components/Nav';
-import NameForm from '../components/NameForm';
-import { Main } from '../global.js';
+import Nav from '../components/nav';
+import NameForm from '../components/nameForm';
+import { GlobalJS } from '../global';
 
 class Home extends Component {
     state = {
@@ -18,8 +18,6 @@ class Home extends Component {
                     return a.order_num - b.order_num;
                 });
 
-                console.log(resp.data)
-
                 this.setState({
                     aboutData: resp.data.about,
                     artData: resp.data.art,
@@ -29,7 +27,7 @@ class Home extends Component {
                 });
 
                 // jQuery functions
-                Main.init();
+                GlobalJS.init();
             })
             .catch(err => {
                 console.log(err);
@@ -40,34 +38,31 @@ class Home extends Component {
         let works, art, pics, worksImgs, artImgs, picsImgs = null;
 
         if (this.state.workData) {
-            works = <MainHOC header='Corporate Entities'
+            works = <Main header='Corporate Entities'
                 headerId='section2-title'
                 dataId='work'
                 dataFeed={this.state.workData} />;
-            worksImgs = <ExtraImages
-                dataFeed={this.state.workData} id='proj-imgs-1' />;
+            worksImgs = <ExtraImages dataFeed={this.state.workData} />;
         }
         if (this.state.artData) {
-            art = <MainHOC header='Cultural Artifacts'
+            art = <Main header='Cultural Artifacts'
                 headerId='section3-title'
                 dataId='art'
                 dataFeed={this.state.artData} />;
-            artImgs = <ExtraImages
-                dataFeed={this.state.artData} id='proj-imgs-2' />;
+            artImgs = <ExtraImages dataFeed={this.state.artData} />;
         }
         if (this.state.picsData) {
-            pics = <MainHOC header='Personnel'
+            pics = <Main header='Personnel'
                 headerId='section4-title'
                 dataId='pics'
                 dataFeed={this.state.picsData} />;
-            picsImgs = <ExtraImages
-                dataFeed={this.state.picsData} id='proj-imgs-3' />;
+            picsImgs = <ExtraImages dataFeed={this.state.picsData} />;
         }
         const about = !this.state.aboutData ?
-            null : <MainHOC header={'Captain\'s Log'}
+            null : <Main header={'Captain\'s Log'}
                     dataFeed={this.state.aboutData} />;
         const skills = !this.state.skillsData ?
-            null : <MainHOC header='Qualifications'
+            null : <Main header='Qualifications'
                     dataFeed={this.state.skillsData} />;
 
         return (
