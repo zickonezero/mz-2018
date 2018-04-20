@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axiosConfig from '../axiosConfig';
 import MainHOC from '../hoc/MainHOC';
+import ExtraImages from '../components/extraImages';
 import Nav from '../components/Nav';
 import NameForm from '../components/NameForm';
 import { Main } from '../global.js';
@@ -36,21 +37,32 @@ class Home extends Component {
     }
 
     render () {
-        const works = !this.state.workData ?
-            null : <MainHOC header='Corporate Entities'
-                    headerId='section2-title'
-                    dataId='work'
-                    dataFeed={this.state.workData} />;
-        const art = !this.state.artData ?
-            null : <MainHOC header='Cultural Artifacts'
-                    headerId='section3-title'
-                    dataId='art'
-                    dataFeed={this.state.artData} />;
-        const pics = !this.state.picsData ?
-            null : <MainHOC header='Personnel'
-                    headerId='section4-title'
-                    dataId='pics'
-                    dataFeed={this.state.picsData} />;
+        let works, art, pics, worksImgs, artImgs, picsImgs = null;
+
+        if (this.state.workData) {
+            works = <MainHOC header='Corporate Entities'
+                headerId='section2-title'
+                dataId='work'
+                dataFeed={this.state.workData} />;
+            worksImgs = <ExtraImages
+                dataFeed={this.state.workData} id='proj-imgs-1' />;
+        }
+        if (this.state.artData) {
+            art = <MainHOC header='Cultural Artifacts'
+                headerId='section3-title'
+                dataId='art'
+                dataFeed={this.state.artData} />;
+            artImgs = <ExtraImages
+                dataFeed={this.state.artData} id='proj-imgs-2' />;
+        }
+        if (this.state.picsData) {
+            pics = <MainHOC header='Personnel'
+                headerId='section4-title'
+                dataId='pics'
+                dataFeed={this.state.picsData} />;
+            picsImgs = <ExtraImages
+                dataFeed={this.state.picsData} id='proj-imgs-3' />;
+        }
         const about = !this.state.aboutData ?
             null : <MainHOC header={'Captain\'s Log'}
                     dataFeed={this.state.aboutData} />;
@@ -98,9 +110,9 @@ class Home extends Component {
                             </section>
 
                             <div id="proj_img_links">
-                                <div id="proj-imgs-1"></div>
-                                <div id="proj-imgs-2"></div>
-                                <div id="proj-imgs-3"></div>
+                                {worksImgs}
+                                {artImgs}
+                                {picsImgs}
                             </div>
                         </div>
                     </div>

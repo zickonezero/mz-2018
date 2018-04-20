@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ExtraImages = (props) => (
-    <span>
+    <div id={props.id}>
         {props.dataFeed.map(function(data, i) {
             let projLink1,
                 projLink2,
@@ -33,7 +33,7 @@ const ExtraImages = (props) => (
                 </span>
             );
         })}
-    </span>
+    </div>
 );
 
 export default ExtraImages;
