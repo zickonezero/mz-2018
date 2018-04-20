@@ -17,6 +17,8 @@ class Home extends Component {
                     return a.order_num - b.order_num;
                 });
 
+                console.log(resp.data)
+
                 this.setState({
                     aboutData: resp.data.about,
                     artData: resp.data.art,
@@ -25,6 +27,7 @@ class Home extends Component {
                     workData: sortedWorkData
                 });
 
+                // jQuery functions
                 Main.init();
             })
             .catch(err => {
