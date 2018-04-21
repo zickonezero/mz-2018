@@ -5,7 +5,10 @@ const webpack = require('webpack');
 
 module.exports = {
     devtool: 'cheap-module-source-map',
-    entry: './src/index.js',
+    entry: [
+        'webpack-dev-server/client?http://0.0.0.0:80',
+        './src/index.js'
+    ],
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
