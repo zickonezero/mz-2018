@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server",
+    "dev": "webpack-dev-server",
     "build": "rimraf dist && webpack --config webpack.prod.config.js --progress --profile --color",
     "prod": "rimraf dist && webpack-dev-server --config webpack.prod.config.js --progress --profile --color"
   },
@@ -33,7 +33,6 @@
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "4.0.0",
-    "express": "^4.16.3",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.1",
     "react": "^16.0.0",
