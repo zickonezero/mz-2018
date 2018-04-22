@@ -9,6 +9,9 @@ module.exports = {
         // 'webpack-dev-server/client?http://138.197.205.154:80',
         './src/index.js'
     ],
+    devServer: {
+        disableHostCheck: true
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
