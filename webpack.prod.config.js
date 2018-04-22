@@ -6,7 +6,7 @@ const webpack = require('webpack');
 module.exports = {
     devtool: 'cheap-module-source-map',
     entry: [
-        'webpack-dev-server/client?http://138.197.205.154:80',
+        // 'webpack-dev-server/client?http://138.197.205.154:80',
         './src/index.js'
     ],
     output: {
