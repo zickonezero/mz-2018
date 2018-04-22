@@ -73,7 +73,6 @@ class Home extends Component {
                         <h1 id="my-name">michael zick</h1>
                         <div id="subclass">
                             <p>ui engineer : class a : v 3.1.0</p>
-                            <p>this site is built on nodejs // express // ejs // react // mongodb</p>
                         </div>
                         <div id="socialwell">
                             <span><a href="http://www.linkedin.com/in/michaelzick" target="_blank">linkedin</a></span>
