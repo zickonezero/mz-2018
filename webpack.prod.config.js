@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
+    mode: 'production',
     devtool: 'cheap-module-source-map',
     entry: './src/index.js',
     devServer: {
@@ -38,16 +39,10 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.DefinePlugin({
-            'process.env': {
-                NODE_ENV: JSON.stringify('production')
-            }
-        }),
         new HtmlWebpackPlugin({
             template: __dirname + '/src/index.html',
             filename: 'index.html',
             inject: 'body'
-        }),
-        new webpack.optimize.UglifyJsPlugin()
+        })
     ]
 };
