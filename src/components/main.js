@@ -22,7 +22,7 @@ const main = (props) => {
                         {props.dataFeed.map((skill) => {
                             return <li className='lato qual-item'
                                 key={skill.skill}>{skill.skill}</li>;
-                        })};
+                        })}
                     </ul>
                 </div>
             </div>
