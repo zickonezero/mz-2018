@@ -8,7 +8,7 @@
     "dev": "webpack-dev-server",
     "build": "rimraf dist && webpack --config webpack.prod.config.js --progress --profile --color",
     "dev-prod": "rimraf dist && webpack-dev-server --config webpack.prod.config.js --progress --profile --color",
-    "prod": "rimraf dist && webpack-dev-server --https --cert /etc/letsencrypt/live/michaelzick.com/fullchain.pem --cacert /etc/letsencrypt/live/michaelzick.com/fullchain.pem --key /etc/letsencrypt/live/michaelzick.com/privkey.pem --host 0.0.0.0 --port 80 --config webpack.prod.config.js --progress --profile --color"
+    "prod": "rimraf dist && webpack-dev-server --https --cert /etc/letsencrypt/live/michaelzick.com/cert.pem --key /etc/letsencrypt/live/michaelzick.com/privkey.pem --host 0.0.0.0 --port 80 --config webpack.prod.config.js --progress --profile --color"
   },
   "author": "",
   "license": "ISC",
