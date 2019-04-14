@@ -8,11 +8,7 @@ module.exports = {
     devtool: 'cheap-module-source-map',
     entry: './src/index.js',
     devServer: {
-        disableHostCheck: true,
-        https: {
-            cert: fs.readFileSync('/etc/letsencrypt/live/michaelzick.com/fullchain.pem'),
-            key: fs.readFileSync('/etc/letsencrypt/live/michaelzick.com/privkey.pem')
-        }
+        disableHostCheck: true
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
