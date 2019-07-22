@@ -8,7 +8,10 @@ module.exports = {
     devtool: 'cheap-module-source-map',
     entry: './src/index.js',
     devServer: {
-        disableHostCheck: true
+        disableHostCheck: true,
+        historyApiFallback: {
+            disableDotRule: true
+        }
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
