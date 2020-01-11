@@ -8,7 +8,7 @@
     "dev": "webpack-dev-server",
     "build": "rimraf dist && webpack --config webpack.prod.config.js --progress --profile --color",
     "dev-prod": "rimraf dist && webpack-dev-server --config webpack.prod.config.js --progress --profile --color",
-    "prod": "rimraf dist && webpack-dev-server --http --host 0.0.0.0 --port 80 --config webpack.prod.config.js --progress --profile --color"
+    "prod": "rimraf dist && webpack-dev-server --host 0.0.0.0 --port 80 --config webpack.prod.config.js --progress --profile --color"
   },
   "author": "",
   "license": "ISC",
