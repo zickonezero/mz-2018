@@ -183,7 +183,7 @@ h6 {
     cursor: default
 }
 .thumbnail {
-    display: block;
+    display: inline-block;
     padding: 4px;
     line-height: 20px;
     border: 0;
