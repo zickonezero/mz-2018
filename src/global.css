@@ -196,7 +196,10 @@ h6 {
     -webkit-transition: none;
     -moz-transition: none;
     -o-transition: none;
-    transition: none
+    transition: none;
+}
+.thumbnail img {
+    border-radius: 15px;
 }
 a.thumbnail:hover {
     -webkit-box-shadow: none;
