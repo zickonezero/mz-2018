@@ -59,13 +59,14 @@ h6 {
     display: none
 }
 #fancybox-thumbs ul li a img {
-    max-width: none
+    max-width: none;
 }
 #subclass {
-    margin-bottom: 22px
+    margin-bottom: 22px;
 }
 #subclass p {
-    margin: 0
+    margin: 0;
+    font-size: 26px;
 }
 #socialwell {
     margin: 10px 0 30px 0;
@@ -89,7 +90,8 @@ h6 {
     font-size: 6.7em;
     margin-bottom: 10px;
     line-height: 1em;
-    clear: both
+    clear: both;
+    margin-top: 40px;
 }
 #navigationMap {
     z-index: 999;

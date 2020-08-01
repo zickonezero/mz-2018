@@ -66,52 +66,56 @@ class Home extends Component {
                     dataFeed={this.state.skillsData} />;
 
         return (
-            <div className="content">
-                <div className="row-fluid">
-                    <div className="span12">
-                        <Nav />
-                        <h1 id="my-name">michael zick</h1>
-                        <div id="subclass">
-                            <p>ui engineer : class a : v 3.1.0</p>
-                        </div>
-                        <div id="socialwell">
-                            <span><a href="http://www.linkedin.com/in/michaelzick" target="_blank">linkedin</a></span>
-                            <span>&nbsp;:&nbsp;</span>
-                            <span><a href="http://zickonezero.tumblr.com/" target="_blank">blog</a></span>
-                            <span>&nbsp;:&nbsp;</span>
-                            <span><a href="https://github.com/zickonezero?tab=repositories" target="_blank">github</a></span>
-                        </div>
-
-                        <div id="ascensorBuilding">
-                            <section>
-                                <div id="loader"></div>
-                                <h1 id="intro" className="typeText"></h1>
-                                <br></br>
-                                <NameForm />
-                            </section>
-                            <section className="add-border">
-                                {works}
-                            </section>
-                            <section className="add-border large-img">
-                                {art}
-                            </section>
-                            <section className="add-border large-img">
-                                {pics}
-                            </section>
-                            <section>
-                                {about}
-                                {skills}
-                            </section>
-
-                            <div id="proj_img_links">
-                                {worksImgs}
-                                {artImgs}
-                                {picsImgs}
-                            </div>
-                        </div>
-                    </div>
+          <div className="content">
+            <div className="row-fluid">
+              <div className="span12">
+                <h1 id="my-name">Michael Zick</h1>
+                <div id="subclass">
+                  <p>Life & Relationship Coach for Men</p>
                 </div>
+                <div id="socialwell">
+                  <span>
+                    <a
+                      href="https://www.linkedin.com/in/michaelzick"
+                      target="_blank"
+                    >
+                      LinkedIn
+                    </a>
+                  </span>
+                  <span>&nbsp;:&nbsp;</span>
+                  <span>
+                    <a
+                      href="https://twitter.com/michaelzick"
+                      target="_blank"
+                    >
+                      Twitter
+                    </a>
+                  </span>
+                </div>
+
+                <div id="ascensorBuilding">
+                  <section>
+                    <div id="loader"></div>
+                    <h1 id="intro" className="typeText"></h1>
+                    <br></br>
+                  </section>
+                  <section className="add-border">{works}</section>
+                  <section className="add-border large-img">{art}</section>
+                  <section className="add-border large-img">{pics}</section>
+                  <section>
+                    {about}
+                    {skills}
+                  </section>
+
+                  <div id="proj_img_links">
+                    {worksImgs}
+                    {artImgs}
+                    {picsImgs}
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         );
     }
 };

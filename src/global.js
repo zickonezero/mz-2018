@@ -247,7 +247,7 @@ export const GlobalJS = (() => {
             $('#input-name').attr('readonly', 'readonly');
             hideThis = true;
         } else {
-            theMessage = "Welcome. Please state your name.";
+            theMessage = "New site coming soon.";
             username = theUsername;
             if (username !== null && username !== "") {
                 setCookie("username", username, 365);
